@@ -62,11 +62,11 @@ app.put("/livros", (req, res, next) => {
 }
     })
     res.status(204).end();
-});
-app.delete("/livros/:id",(req,res,next) => {
-    const idlivrosDeletado = req.params.id;
-    livros.forEach(livro.index) => {
-        if(livro.id == idlivrosDeletado) livros.splice(index,1)
 })
+app.delete("/livros/:id",(req,res,next) => {
+    const idlivroDeletado = req.params.id;
+    livros.forEach(livro,index =>{
+        if(livro.id == idlivrosDeletado) livros.splice(index,1)
+    })
 res.status(200).json(livros);
 })
